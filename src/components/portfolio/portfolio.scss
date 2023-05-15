@@ -1,0 +1,64 @@
+@import "../../global.scss";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+	background-color: #000;
+	overflow: hidden;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	
+	scrollbar-width: none; //for firefox
+	&::-webkit-scrollbar{
+		display: none;
+	}
+	
+	
+  }
+
+  
+
+  .text-container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   
+  }
+  
+  .text-container h1{
+	margin: 0;
+	font-size: 150px;
+	color: rgba(255, 255, 255, 0.59);
+	background-image: url("https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076536_960_720.jpg");
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	animation: animate 15s ease-in-out infinite;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 900;
+    @include mobile {
+		font-size: 60px;
+	  }
+	
+  }
+  
+	@keyframes animate {
+	  0%, 100% {
+		background-position: left top;
+	  }
+	  25%{
+		background-position: right bottom;
+	   }
+	  50% {
+		background-position: left bottom;
+	  }
+	  75% {
+		background-position: right top;
+	  }   
+  }
